@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Toastify -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
+    <!-- Preconect do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Meta tags comportamentais -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Carregando Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Carregando Remix Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- Meta tags OG -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Retaurante" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="O melhor Retaurante" />
+    <meta property="og:site_name" content="Retaurante" />
+
+    <!-- Estilos Tailwind -->
+    <link href="./assets/css/output.css" rel="stylesheet" />
+
+    <!-- Título da Página -->
+    <title>Cardápio Digital</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="w-full h-[420px] bg-home bg-cover bg-center">
+      <!-- Logo -->
+      <div class="w-full h-full flex flex-col justify-center items-center">
+        <img
+          src="./assets/images/logo.jpg"
+          alt="Logo do Restaurante"
+          class="w-32 h-32 rounded-full shadow-lg hover:scale-110"
+        />
+        <!-- Nome do Restaurante -->
+        <h1 class="text-4xl mt-4 mb-2 font-bold text-white shadow-lg">
+          Restaurante Menu
+        </h1>
+        <span class="text-white font-medium shadow-lg"
+          >Rua Javascript, Nº 24, Centro - Vale do Silício/CA
+        </span>
+
+        <div class="bg-green-500 px-3 py-1 rounded-lg mt-5" id="date-span">
+          <span class="text-white font-medium">Seg á Dom - 18:00 às 23:00</span>
+        </div>
+      </div>
+    </header>
+
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
+      Cardápio
+    </h2>
+
+    <!-- Menu -->
+    <div id="menu">
+      <main
+        class="container max-w-screen-lg mx-auto grid grid-cols-1 md:grid-cols-3 gap-7 md:gap-10 mb-16"
+      >
+        <div class="flex items-center gap-4 p-4 border rounded-md hover:scale-105 transition-all">
+          <img
+            src="./assets/images/pizza-calabresa.jpg"
+            alt=""
+            class="w-28 h-28 rounded-md"
+          />
+
+          <div class="w-full">
+            <p class="font-bold">Pizza Calabresa</p>
+            <p class="text-sm">
+              Pizza grande de calabresa, mussarela, oregano
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 30.50</p>
+              <button
+                class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-600 duration-300 add-to-cart-btn"
+                data-name="Pizza Grande"
+                data-price="30.50"
+              >
+                <i class="ri-shopping-cart-line text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 p-4 border rounded-md hover:scale-105 transition-all">
+          <img
+            src="./assets/images/hamb-1.png"
+            alt=""
+            class="w-28 h-28 rounded-md"
+          />
+
+          <div class="w-full">
+            <p class="font-bold">Cheese Burguer</p>
+            <p class="text-sm">
+              Cheddar, cebola, picles, ketchup, mostarda e pão sem gergelim
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 20.50</p>
+              <button
+                class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-600 duration-300 add-to-cart-btn"
+                data-name="Cheese Burguer"
+                data-price="20.50"
+              >
+                <i class="ri-shopping-cart-line text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 p-4 border rounded-md hover:scale-105 transition-all">
+          <img
+            src="./assets/images/hamb-2.png"
+            alt=""
+            class="w-28 h-28 rounded-md"
+          />
+
+          <div class="w-full">
+            <p class="font-bold">X-Bacon</p>
+            <p class="text-sm">
+              Carne, queijo, bacon, alface, tomate e molho especial no pão
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 22.50</p>
+              <button
+                class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-600 duration-300 add-to-cart-btn"
+                data-name="x-bacon"
+                data-price="22.50"
+              >
+                <i class="ri-shopping-cart-line text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 p-4 border rounded-md hover:scale-105 transition-all">
+          <img
+            src="./assets/images/hamb-3.png"
+            alt=""
+            class="w-28 h-28 rounded-md"
+          />
+
+          <div class="w-full">
+            <p class="font-bold">X-Eggs</p>
+            <p class="text-sm">
+              Pão, carne, ovo, queijo prato, calabresa, alface e tomate.
+            </p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 18.50</p>
+              <button
+                class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-600 duration-300 add-to-cart-btn"
+                data-name="x-eggs"
+                data-price="18.50"
+              >
+                <i class="ri-shopping-cart-line text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <hr class="my-20">
+
+      <div
+        class="mx-auto mx-w-7xl px-2 mb-6 mt-10 text-2xl md:text-3xl font-bold text-center"
+      >
+        <h2 class="font-bold text-3xl">Bebidas</h2>
+      </div>
+
+      <div
+        class="container max-w-screen-lg grid grid-cols-1 md:grid-cols-3 gap-7 md:gap-10 mx-auto mb-20"
+      >
+        <div class="flex items-center gap-4 p-4 border rounded-md hover:scale-105 transition-all">
+          <img
+            src="./assets/images/refri-1.png"
+            alt=""
+            class="w-28 h-28 rounded-md"
+          />
+
+          <div class="w-full">
+            <p class="font-bold">Coca Lata</p>
+            <p class="text-sm">Coca cola lata 350ml</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 4</p>
+              <button
+                class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-600 duration-300 add-to-cart-btn"
+                data-name="Coca Lata"
+                data-price="4"
+              >
+                <i class="ri-shopping-cart-line text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 p-4 border rounded-md hover:scale-105 transition-all">
+          <img
+            src="./assets/images/refri-2.png"
+            alt=""
+            class="w-28 h-28 rounded-md"
+          />
+
+          <div class="w-full">
+            <p class="font-bold">Guaraná Lata</p>
+            <p class="text-sm">Guaraná lata 350ml</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 4</p>
+              <button
+                class="bg-gray-900 px-5 py-1 rounded hover:bg-zinc-600 duration-300 add-to-cart-btn"
+                data-name="Guarana Lata"
+                data-price="4"
+              >
+                <i class="ri-shopping-cart-line text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
+      id="cart-modal"
+    >
+      <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+        <h2 class="text-center font-bold text-2xl mb-4">Meu Carrinho</h2>
+
+        <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+        <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+        <p class="font-bold mt-4 mb-4">Endereço de Entrega:</p>
+        <input
+          type="text"
+          placeholder="Digite seu endereço detalhado"
+          id="address"
+          class="w-full border-2 p-1 rounded my-1"
+        />
+        <p class="text-red-500 hidden" id="address-warn">
+          Digite seu endereço completo!
+        </p>
+        <hr class="my-5">
+        <div class="flex items-center justify-between mt-5 w-full">
+          <button
+            id="close-modal-btn"
+            class="hover:bg-zinc-200 duration-300 py-1 px-2 rounded"
+          >
+            Fechar
+          </button>
+          <button
+            id="checkout-btn"
+            class="bg-green-600 hover:bg-green-700 duration-300 text-white px-4 py-2 rounded-md"
+          >
+            Finalizar Pedido
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer
+      class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center"
+    >
+      <button
+        class="flex items-center gap-2 text-white font-bold"
+        id="cart-btn"
+      >
+        (<span id="cart-count">0</span>) Ver Carrinho
+        <i class="ri-shopping-cart-line text-lg text-white"></i>
+      </button>
+    </footer>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
